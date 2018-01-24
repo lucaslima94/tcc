@@ -1,0 +1,14 @@
+<variable source="EnergyPlus">
+    <EnergyPlus name="People Block6:Zone1" type="Zone Thermal Comfort Fanger Model PMV"/> <!-- PMV Mezanino -->
+</variable>
+
+<!-- Temperatura dos Comodos -->
+<variable source="EnergyPlus">
+    <EnergyPlus name="Block1:Zone5" type="Zone Mean Air Temperatura"/> <!-- Temperatura Jardim de Inverno -->
+</variable>
+<variable source="EnergyPlus">
+    <EnergyPlus name="Block1:Zone7" type="Zone Mean Air Temperatura"/> <!-- Temperatura Sala de Estar/Cozinha -->
+</variable>
+<variable source="EnergyPlus">
+    <EnergyPlus name="Block6:Zone1" type="Zone Mean Air Temperatura"/> <!-- Temperatura Mezanino -->
+</variable>
