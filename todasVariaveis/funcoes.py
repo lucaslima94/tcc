@@ -69,12 +69,24 @@ def calcularFitness(valorGeneAtual,contadorTimeStep):
 	
 def generateNextGeneration(population,contadorTimeStep):
 	nextPopulation=[]
+	pospai1=0
+	pospai2=0
+	roleta,valormaximo=geradorRoleta(population)
+	print len(roleta)
+	print valormaximo
 	for i in range(0,int(len(population)/10)):
 		nextPopulation.append(copy.deepcopy(population[i]))
 	for i in range(0,int(len(population)/10)):
 		del(population[0])
 	for i in range(int(len(population)/2)):
-		filho1,filho2=cruzamento(copy.deepcopy(population[randint(0,len(population)-1)]),copy.deepcopy(population[randint(0,len(population)-1)]),contadorTimeStep)
+		randpai1=randint(0,valormaximo)
+		randpai2=randint(0,valormaximo)
+		for j in range(len(roleta)):
+			if((randpai1>=roleta[j].getvalorinicial()) and (randpai1<=roleta[j].getvalorfinal())):
+				pospai=j
+			if((randpai2>=roleta[j].getvalorinicial()) and (randpai2<=roleta[j].getvalorfinal())):
+				pospai2=j
+		filho1,filho2=cruzamento(copy.deepcopy(population[pospai1]),copy.deepcopy(population[pospai2]),contadorTimeStep)
 		nextPopulation.append(filho1)
 		nextPopulation.append(filho2)
 	populacaoOrdenada = sorted(nextPopulation, key = Gene.getfitness,reverse=True)
@@ -90,7 +102,7 @@ def geradorRoleta(population):
 		numeroroletaatual=numeroRoleta(population[i].getvalor(),population[i].getfitness(),acumuladorfitness,acumuladorfitness+int(population[i].getfitness())-1)
 		acumuladorfitness=acumuladorfitness+int(population[i].getfitness())
 		roleta.append(numeroroletaatual)
-	return roleta
+	return roleta,acumuladorfitness
 
 def cruzamento(pai1,pai2,contadorTimeStep):
 		genefilho1=[]

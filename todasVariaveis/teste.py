@@ -8,10 +8,8 @@ x=funcoes.generatePopulation(1000)
 
 newpopulation=funcoes.generateNextGeneration(x,0)
 #print "\n","\n","\n","\n","\n"
-#for i in range(100,109):
-#	print newpopulation[i].getvalor(),newpopulation[i].getfitness()
-roleta=funcoes.geradorRoleta(x)
-for i in range(len(roleta)):
-	print roleta[i].getvalorinicial(), roleta[i].getvalorfinal()
+for i in range(990,999):
+	print newpopulation[i].getvalor(),newpopulation[i].getfitness()
+#roleta=funcoes.geradorRoleta(x)
 
 
