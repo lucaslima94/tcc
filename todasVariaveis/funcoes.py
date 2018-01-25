@@ -57,13 +57,13 @@ def generatePopulation(tamPopulation):
 
 def calcularFitness(valorGeneAtual,contadorTimeStep):
 	if(contadorTimeStep<=2234):
-		valorFitness= valorGeneAtual[0]*100
+		valorFitness= valorGeneAtual[4]*70+valorGeneAtual[5]*70+valorGeneAtual[0]*20+valorGeneAtual[1]*20+valorGeneAtual[2]*10+valorGeneAtual[3]*20
 	if (contadorTimeStep>2234 and contadorTimeStep<=4466):
-		valorFitness= 20
+		valorFitness=valorGeneAtual[0]*70+valorGeneAtual[1]*70-valorGeneAtual[2]*10-valorGeneAtual[3]*10+valorGeneAtual[4]*20+valorGeneAtual[5]*20
 	if(contadorTimeStep>4466 and contadorTimeStep<=6698):
-		valorFitness= 30
+		valorFitness=valorGeneAtual[0]*10+valorGeneAtual[1]*10-valorGeneAtual[2]*70-valorGeneAtual[3]*70-valorGeneAtual[4]*20-valorGeneAtual[5]*20
 	if(contadorTimeStep>6698):
-		valorFitness= 40
+		valorFitness=valorGeneAtual[0]*10+valorGeneAtual[1]*10-valorGeneAtual[2]*30-valorGeneAtual[3]*10-valorGeneAtual[4]*70-valorGeneAtual[5]*70
 	return valorFitness
 	
 	
@@ -73,7 +73,7 @@ def generateNextGeneration(population,contadorTimeStep):
 	pospai2=0
 	roleta,valormaximo=geradorRoleta(population)
 	print len(roleta)
-	print valormaximo
+	print len(population)
 	for i in range(0,int(len(population)/10)):
 		nextPopulation.append(copy.deepcopy(population[i]))
 	for i in range(0,int(len(population)/10)):
@@ -81,7 +81,7 @@ def generateNextGeneration(population,contadorTimeStep):
 	for i in range(int(len(population)/2)):
 		randpai1=randint(0,valormaximo)
 		randpai2=randint(0,valormaximo)
-		for j in range(len(roleta)):
+		for j in range(len(population)):
 			if((randpai1>=roleta[j].getvalorinicial()) and (randpai1<=roleta[j].getvalorfinal())):
 				pospai=j
 			if((randpai2>=roleta[j].getvalorinicial()) and (randpai2<=roleta[j].getvalorfinal())):
@@ -131,4 +131,10 @@ def mutacao(valorgene):
 		else:
 			valorgene[y]=1
 	return valorgene
-			
+
+
+def recalculaFitness(population,contadorTimeStep):
+	for i in range(len(population)):
+		population[i].setfitness(calcularFitness(population[i].getvalor(),contadorTimeStep))
+	populacaoOrdenada = sorted(population, key = Gene.getfitness,reverse=True)
+	return populacaoOrdenada			
