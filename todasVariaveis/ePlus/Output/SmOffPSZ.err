@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2018.01.22 14:51,IDD_Version 8.4.0
+Program Version,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2018.02.14 16:20,IDD_Version 8.4.0
    ** Severe  ** IP: Potential errors in IDF processing -- see .audit file for details.
    ** Warning ** Timestep: Requested number (1) is less than the suggested minimum of 4.
    **   ~~~   ** Please see entry for Timestep in Input/Output Reference for discussion of considerations.
@@ -43,11 +43,12 @@ Program Version,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2018.01.22 14:51,IDD_V
    ************* All Return Air Paths passed integrity testing
    ************* No node connection errors were found.
    ************* Beginning Simulation
-   ** Warning ** More than 4% of time (1.0 hours) uncomfortable in one or more zones 
+   ** Warning ** More than 4% of time (88.3 hours) uncomfortable in one or more zones 
    **   ~~~   ** Based on ASHRAE 55-2004 graph (Section 5.2.1.1)
-   **   ~~~   ** During Environment [12/01 - 11/31]: VERAOTODASABERTAS
-   **   ~~~   ** 4.0 hours were uncomfortable in zone: BLOCK1:ZONE3
-   **   ~~~   ** 4.0 hours were uncomfortable in zone: BLOCK1:ZONE6
+   **   ~~~   ** During Environment [09/01 - 11/31]: VERAOTODASABERTAS
+   **   ~~~   ** 513.0 hours were uncomfortable in zone: BLOCK1:ZONE3
+   **   ~~~   ** 374.0 hours were uncomfortable in zone: BLOCK1:ZONE7
+   **   ~~~   ** 478.0 hours were uncomfortable in zone: BLOCK1:ZONE6
    ************* Simulation Error Summary *************
    ************* There are 1 unused objects in input.
    ************* Use Output:Diagnostics,DisplayUnusedObjects; to see them.
@@ -81,4 +82,4 @@ Program Version,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2018.01.22 14:51,IDD_V
    *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
    ************* EnergyPlus Sizing Error Summary. During Sizing: 7 Warning; 2 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 11 Warning; 3 Severe Errors; Elapsed Time=00hr 00min 36.10sec
+   ************* EnergyPlus Completed Successfully-- 11 Warning; 3 Severe Errors; Elapsed Time=00hr 03min 48.81sec

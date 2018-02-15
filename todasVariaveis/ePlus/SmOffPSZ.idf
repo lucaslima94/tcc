@@ -5,9 +5,9 @@
 
   RunPeriod,
     VeraoTodasAbertas,       !- Name
-    12,                      !- Begin Month
+    9,                      !- Begin Month
     1,                       !- Begin Day of Month
-	11,                       !- End Month
+    11,                      !- End Month
     31,                      !- End Day of Month
     UseWeatherFile,          !- Day of Week for Start Day
     No,                      !- Use Weather File Holidays and Special Days

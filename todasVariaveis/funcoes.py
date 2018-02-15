@@ -41,7 +41,7 @@ class numeroRoleta(object):
 	def getvalorfinal(self):
 		return self.valorfinal
 
-def generatePopulation(tamPopulation):
+def generatePopulation(tamPopulation,contadorTimeStep):
 	Population=[]
 	valoratual=[]
 	fitnessatual=0
@@ -50,21 +50,21 @@ def generatePopulation(tamPopulation):
 		for i in range(0,6):
 			valoratual.append(randint(0,1))
 		valoratual.extend([0,0,0,0])
-		geneatual=Gene(valoratual,calcularFitness(valoratual,0))
+		geneatual=Gene(valoratual,calcularFitness(valoratual,contadorTimeStep))
 		Population.append(copy.copy(geneatual))
 	populacaoOrdenada = sorted(Population, key = Gene.getfitness,reverse=True)	
 	return populacaoOrdenada
 
 def calcularFitness(valorGeneAtual,contadorTimeStep):
 	if(contadorTimeStep<=2234):
-		valorFitness= valorGeneAtual[4]*70+valorGeneAtual[5]*70+valorGeneAtual[0]*20+valorGeneAtual[1]*20+valorGeneAtual[2]*10+valorGeneAtual[3]*20
+		valorFitness= valorGeneAtual[4]*45+valorGeneAtual[5]*45+valorGeneAtual[0]*40+valorGeneAtual[1]*40+valorGeneAtual[2]*35+valorGeneAtual[3]*35
 	if (contadorTimeStep>2234 and contadorTimeStep<=4466):
-		valorFitness=valorGeneAtual[0]*70+valorGeneAtual[1]*70-valorGeneAtual[2]*10-valorGeneAtual[3]*10+valorGeneAtual[4]*20+valorGeneAtual[5]*20
+		valorFitness=valorGeneAtual[0]*45+valorGeneAtual[1]*45-valorGeneAtual[2]*35-valorGeneAtual[3]*35+valorGeneAtual[4]*40+valorGeneAtual[5]*40
 	if(contadorTimeStep>4466 and contadorTimeStep<=6698):
-		valorFitness=valorGeneAtual[0]*10+valorGeneAtual[1]*10-valorGeneAtual[2]*70-valorGeneAtual[3]*70-valorGeneAtual[4]*20-valorGeneAtual[5]*20
+		valorFitness=valorGeneAtual[0]*35+valorGeneAtual[1]*35-valorGeneAtual[2]*45-valorGeneAtual[3]*45-valorGeneAtual[4]*40-valorGeneAtual[5]*40
 	if(contadorTimeStep>6698):
-		valorFitness=valorGeneAtual[0]*10+valorGeneAtual[1]*10-valorGeneAtual[2]*30-valorGeneAtual[3]*10-valorGeneAtual[4]*70-valorGeneAtual[5]*70
-	return valorFitness
+		valorFitness=valorGeneAtual[0]*35+valorGeneAtual[1]*35-valorGeneAtual[2]*40-valorGeneAtual[3]*40-valorGeneAtual[4]*45-valorGeneAtual[5]*45
+	return valorFitness+200
 	
 	
 def generateNextGeneration(population,contadorTimeStep):
@@ -72,8 +72,8 @@ def generateNextGeneration(population,contadorTimeStep):
 	pospai1=0
 	pospai2=0
 	roleta,valormaximo=geradorRoleta(population)
-	print len(roleta)
-	print len(population)
+	#print len(roleta)
+	#print len(population)
 	for i in range(0,int(len(population)/10)):
 		nextPopulation.append(copy.deepcopy(population[i]))
 	for i in range(0,int(len(population)/10)):

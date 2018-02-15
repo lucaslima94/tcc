@@ -143,7 +143,7 @@
  sizeColumnTag=         800
  numColumnTag=         416
  sizeTableEntry=        3200
- numTableEntry=        2867
+ numTableEntry=        2868
  sizeCompSizeTableEntry=         100
  numCompSizeTableEntry=          68
  NumOfRVariable=       26740
@@ -160,7 +160,7 @@
  NumEnergyMeters=          78
  NumVarMeterArrays=          58
  maxUniqueKeyCount=        1500
- maxNumberOfFigures=        7115
+ maxNumberOfFigures=        9959
  MAXHCArrayBounds=          18
  MaxVerticesPerSurface=           8
  NumReportList=         500

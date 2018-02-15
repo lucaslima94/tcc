@@ -52,7 +52,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="{200.0, 75.0}">
         </property>
     </property>
-    <property name="endTime" class="ptolemy.data.expr.Parameter" value="12*31*24*3600">
+    <property name="endTime" class="ptolemy.data.expr.Parameter" value="3*31*24*3600">
         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
             <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
             </property>

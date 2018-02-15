@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2018.01.22 14:51
+Program Version,EnergyPlus, Version 8.4.0-09f5359d8a, YMD=2018.02.14 16:20
 ! <Version>, Version ID
  Version, 8.4
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -643,21 +643,21 @@ Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
 ! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
 ! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
 ! <Environment:WarmupDays>, NumberofWarmupDays
-Environment,VERAOTODASABERTAS,WeatherFileRunPeriod,12/01,11/31,Friday,1,UseWeatherFile,No,No,Yes,Yes,Yes
+Environment,VERAOTODASABERTAS,WeatherFileRunPeriod,09/01,11/31,Friday,92,UseWeatherFile,No,No,Yes,Yes,Yes
 Environment:Daylight Saving,Yes,InputFile,10/15,02/12
-Environment:WarmupDays,  6
+Environment:WarmupDays, 11
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,BLOCK5:ZONE1,RunPeriod: VERAOTODASABERTAS,0.2303943153,0.1522334202,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK1:ZONE4,RunPeriod: VERAOTODASABERTAS,0.4125793123,0.3296966397,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK1:ZONE3,RunPeriod: VERAOTODASABERTAS,0.5593588824,0.4425499210,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK1:ZONE7,RunPeriod: VERAOTODASABERTAS,0.8448342528,0.5314500374,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK1:ZONE6,RunPeriod: VERAOTODASABERTAS,0.5344948345,0.4148349067,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK1:ZONE5,RunPeriod: VERAOTODASABERTAS,0.7223585889,0.4161167801,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK1:ZONE1,RunPeriod: VERAOTODASABERTAS,0.6530730863,0.4932292762,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK1:ZONE2,RunPeriod: VERAOTODASABERTAS,0.4398366826,0.3338651748,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK3:ZONE1,RunPeriod: VERAOTODASABERTAS,0.6441287131,0.3978982595,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK6:ZONE1,RunPeriod: VERAOTODASABERTAS,0.8211707928,0.6709396536,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BLOCK2:ZONE1,RunPeriod: VERAOTODASABERTAS,0.9553261870,0.4799596137,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BLOCK5:ZONE1,RunPeriod: VERAOTODASABERTAS,4.0977980057E-002,3.2987628845E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BLOCK1:ZONE4,RunPeriod: VERAOTODASABERTAS,0.2785118408,0.4125409302,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BLOCK1:ZONE3,RunPeriod: VERAOTODASABERTAS,0.7407353599,0.7497849831,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BLOCK1:ZONE7,RunPeriod: VERAOTODASABERTAS,0.7872031917,1.4652485943,Pass,Pass,4.8610481227E-002,0.2331276782,Pass,Pass
+ Warmup Convergence Information,BLOCK1:ZONE6,RunPeriod: VERAOTODASABERTAS,0.8213871381,0.8465146910,Pass,Pass,1.6724024051,6.1522250574,Pass,Pass
+ Warmup Convergence Information,BLOCK1:ZONE5,RunPeriod: VERAOTODASABERTAS,0.6160701927,1.1194126342,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BLOCK1:ZONE1,RunPeriod: VERAOTODASABERTAS,0.4018335235,0.5165666696,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BLOCK1:ZONE2,RunPeriod: VERAOTODASABERTAS,0.7554810112,0.9957515727,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BLOCK3:ZONE1,RunPeriod: VERAOTODASABERTAS,0.8970935537,0.7339450622,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BLOCK6:ZONE1,RunPeriod: VERAOTODASABERTAS,0.3895615237,0.7767419524,Pass,Pass,4.9460995809E-002,0.1640521884,Pass,Pass
+ Warmup Convergence Information,BLOCK2:ZONE1,RunPeriod: VERAOTODASABERTAS,1.0434388524,0.7562899828,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data
